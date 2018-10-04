@@ -13,6 +13,6 @@ Node.js was the preffered language.
 The project has the backend
 1. git clone https://github.com/joecutter/doveriaTest.git
 2. cd doveriaTest && npm i
-3. node app.js
+3. `run on cli node app.js`
 4. Done
 
