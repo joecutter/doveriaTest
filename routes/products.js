@@ -95,17 +95,51 @@ router.get('/allcat', function(req, res, next) {
 
 /**DELETE*/
 router.get('/delete/:id', function(req, res, next) {
-  res.send('respond with a resource');
+var id = req.params.id
+    Product.findOneAndRemove({"name":id} ,function(error, data){
+  	if(error){
+    		return res.send({'code':400, 'data':error})
+    	}else{
+        const response = {
+            message: "Item successfully deleted",
+            id: data._id
+        };
+    	   return res.send({'code':200, 'data':response})
+    	}
+    })
 });
 
 /**EDIT*/
-router.get('/edit/:id', function(req, res, next) {
-  res.send('respond with a resource');
+router.post('/edit', function(req, res, next) {
+  var data ={
+    "_id":req.body.id,
+    "dateCreated":req.body.dateCreated,
+    "name":req.body.product,
+    "category":req.body.category
+  }
+    // console.log(JSON.stringify(req.body.dateCreated));
+    Product.findByIdAndUpdate(req.body.id, data, {new:true}, (error, update)=>{
+  	if(error){
+    		return res.send({'code':400, 'data':error})
+    	}else{
+        // console.log(JSON.stringify(update));
+        return res.send({'code':200, 'data':update})
+    	}
+    })
 });
+
 
 /**VIEW*/
 router.get('/view/:id', function(req, res, next) {
-  res.send('respond with a resource');
+  var id = req.params.id
+
+    Product.findOne({"name":id},function(error, data){
+    if(error){
+        return res.send({'code':400, 'data':error})
+      }else{
+         return res.send({'code':200, 'data':data})
+      }
+    })
 });
 
 module.exports = router;
