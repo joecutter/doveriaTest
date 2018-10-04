@@ -1,5 +1,5 @@
-# doveriaTest
-sample Angular application
+# doveriaBackend
+Sample Node.js application
 
 # DATABASE
 The database used was mongodb, but for testing purpose i used an online service for hosting the db called mlab. https://mlab.com/databases/doveria/collections/category
@@ -8,14 +8,6 @@ password:password2ME
 
 # BACKEND
 Node.js was the preffered language.
-
-# TEST
-Test done was integration test. Testing HttpClient request in the service.
-Simulated different request using different # API endpoint.
-
-# RUN TEST
-1. cd to doveriaClient 
-2. ng test
 
 # RUN
 The project has both the clientside and backend
