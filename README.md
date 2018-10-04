@@ -19,7 +19,7 @@ Simulated differnt request using different # API endpoint.
 
 # RUN
 The project has both the clientside and backend
-1. git clone https://mlab.com/databases/doveria/collections/category
+1. git clone https://github.com/joecutter/doveriaTest.git
 2. cd doveriaTest && npm i
 3. node app.js
 4. leave that terminal running and open another terminal
