@@ -11,7 +11,7 @@ Node.js was the preffered language.
 
 # TEST
 Test done was integration test. Testing HttpClient request in the service.
-Simulated differnt request using different # API endpoint.
+Simulated different request using different # API endpoint.
 
 # RUN TEST
 1. cd to doveriaClient 
