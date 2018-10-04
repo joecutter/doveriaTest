@@ -4,7 +4,7 @@ sample Angular application
 # DATABASE
 The database used was mongodb, but for testing purpose i used an online service for hosting the db called mlab. https://mlab.com/databases/doveria/collections/category
 username:cutternjenga
-password:
+password:password2ME
 
 # BACKEND
 Node.js was the preffered language.
